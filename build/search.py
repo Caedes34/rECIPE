@@ -50,13 +50,13 @@ class RecipeApp(object):
             if recipe_url:  # Open link only if it's not empty
                 webbrowser.open(recipe_url)
 
-        # If recipe_url is empty, hide or disable the link button
+        
         if recipe_url:
             self.recipe_button = tk.Button(self.window, text="Recipe Link", highlightbackground="#ea86b6",
                                            command=__open_link)
             self.recipe_button.grid(column=1, row=7, pady=10)
         else:
-            # You can either not show the button or show a message if no source URL is found.
+           
             self.recipe_button = tk.Label(self.window, text="No recipe link available", bg="#ea86b6")
             self.recipe_button.grid(column=1, row=7, pady=10)
 
@@ -104,7 +104,7 @@ class RecipeApp(object):
 
 # Create App and run the app
 if __name__ == "__main__":
-    recipe_app_key = "8b4d854f3bb446afa28109f20019f126"  # Replace with your Spoonacular API Key
+    recipe_app_key = "8b4d854f3bb446afa28109f20019f126" 
 
     recipe_app = RecipeApp(recipe_app_key)
     recipe_app.run_app()
